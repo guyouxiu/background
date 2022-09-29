@@ -8,10 +8,10 @@ module.exports = defineConfig({
     https: false,
     proxy: {
       [process.env.VUE_APP_PASE_API]: {
-        target: 'VUE_APP_SERVE_URL',
+        target: process.env.VUE_APP_SERVE_URL,
         changeOrigin: true,
         pathRewrite: {
-          "^/guyouxiu": ''
+          ["^"+process.env.VUE_APP_PASE_API]: ''
         }
 
 
